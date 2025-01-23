@@ -1,10 +1,15 @@
-import { Text } from "react-native";
-import { SafeArea } from "@/src/components/ui";
+import { Stack } from "expo-router";
+import "../global.css";
 
 export default function RootLayout() {
   return (
-    <SafeArea>
-      <Text>23</Text>
-    </SafeArea>
+    <Stack
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="index" />
+      <Stack.Screen name="chat" />
+    </Stack>
   );
 }
