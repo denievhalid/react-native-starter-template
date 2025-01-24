@@ -9,10 +9,10 @@ const Flex = ({ children, className, gap }: FlexProps) =>
     className: flexClasses({ className, gap }),
   });
 
-const FlexRow = ({ children, className }: FlexRowProps) =>
+const FlexRow = ({ children, className, gap }: FlexRowProps) =>
   createElement(View, {
     children,
-    className: flexRowClasses({ className }),
+    className: flexRowClasses({ className, gap }),
   });
 
 export { Flex, FlexRow };

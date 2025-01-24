@@ -1,3 +1,3 @@
 import { cva } from "class-variance-authority";
 
-export const classes = cva(["px-6"]);
+export const classes = cva(["mx-6"]);

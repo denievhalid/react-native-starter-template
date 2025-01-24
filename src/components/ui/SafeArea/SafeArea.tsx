@@ -4,14 +4,15 @@ import { createElement } from "react";
 import { classes } from "./SafeArea.constants";
 import type { SafeAreaProps } from "./SafeArea.types";
 
-export const SafeArea = ({ children, className }: SafeAreaProps) => {
-  const { top } = useSafeAreaInsets();
+export const SafeArea = ({ bottom, children, className }: SafeAreaProps) => {
+  const insets = useSafeAreaInsets();
 
   return createElement(View, {
     children,
     className: classes({ className }),
     style: {
-      paddingTop: top,
+      paddingTop: insets.top,
+      paddingBottom: bottom ? insets.bottom : undefined,
     },
   });
 };
